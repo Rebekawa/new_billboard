@@ -1,7 +1,16 @@
 {% extends 'billboard_app/base.html' %}
 
 {% block content %}
+{% if request.user.is_authenticated %}
 
+            <div class="center user">
+                <h3>{{ request.user.username }}</h3>
+                <a href="/billboard/logout"><button class="btn">Logout</button></a>
+            </div>
+
+
+
+{% else %}
     <div class="bigTitle">Billboard</div>
 
 {#Take the data from the database#}
@@ -55,5 +64,6 @@
     </form>
 
 </div>
+{% endif %}
 
 {% endblock %}
