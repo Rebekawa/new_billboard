@@ -1,0 +1,59 @@
+{% extends 'billboard_app/base.html' %}
+
+{% block content %}
+
+    <div class="bigTitle">Billboard</div>
+
+{#Take the data from the database#}
+
+{% for Post in messages %}
+    <fieldset class="box">
+        <legend class="date">{{ Post.date }}</legend>
+        <span class="title">{{ Post.title }}</span>
+        <div class="text">{{ Post.message }}</div>
+        <div class="author">{{ Post.author }}</div>
+    </fieldset>
+
+{% empty %}
+    <div class="empty">
+        <p>No messages...
+            <br>
+            Click the '+' button to add a new message</p>
+    </div>
+{% endfor %}
+
+{#Button + to add a new post #}
+<div class="addDiv">
+
+        <button id="addButton"><i class="fas fa-plus"></i></button>
+
+</div>
+
+<div id="toAdd">
+    <form action="/billboard/" method="POST">
+        <fieldset id="addBox">
+            <legend class="date">{{ date }}</legend>
+            <span class="title">
+        <input placeholder="title" name="title" required>
+    </span>
+            <div class="text">
+                <textarea placeholder="Your message here" style="width: 750px; height: 100px;" name="message"
+                          required></textarea>
+            </div>
+            <div class="addAuthor">
+                <input placeholder="author" name="author" required>
+            </div>
+        </fieldset>
+        <div id="dropCheck" class="addDiv">
+            <button type="submit" value="submit" id="check">
+                <i class="fas fa-check"></i>
+            </button>
+            <button type='button' id="drop" style="background: red;">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}

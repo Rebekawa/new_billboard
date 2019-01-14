@@ -1,0 +1,98 @@
+.bigTitle{
+    font-family: Anton;
+    font-size : 40px;
+    Color : black;
+    text-align: center
+
+}
+
+.empty{
+    font-family: Arial;
+    font-size : 24px;
+    Color : black;
+    text-align: center
+}
+
+#addButton {
+    background-color: #66CDAA;
+    width: 100px;
+    height: 40px;
+    margin: 6px;
+    border-radius: 5px;
+    left: 44%;
+    position: relative;
+
+}
+
+#toAdd{
+    display: none;
+    padding: 10px;
+    max-width: 821px;
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+
+button#check {
+    background-color: #66CDAA;
+    width: 100px;
+    height: 40px;
+    margin: 6px;
+    border-radius: 5px;
+    left: 50%;
+    position: relative;
+
+}
+
+.title {
+    font-family: Anton;
+    font-size: 30px;
+    color: #00b7ef;
+    margin-left: 10px;
+
+}
+
+.text {
+    font-family: Arial;
+    font-size: 16px;
+    color: #c1bfc0;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    height: 100px;
+
+}
+
+
+
+.addDiv {
+    border: 1px black;
+    border-style: dashed;
+    padding: 10px;
+    max-width: 821px;
+    position: relative;
+    width: 100%;
+    margin: auto;
+
+}
+
+
+#dropCheck {
+    display: none;
+}
+
+#drop {
+    width: 100px;
+    height: 40px;
+    position: relative;
+    left: 178px;
+    border-radius: 5px;
+
+}
+
+.date {
+    font-family: Poiret One;
+    font-size: 16px;
+    color: black;
+}
